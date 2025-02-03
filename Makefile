@@ -1,15 +1,33 @@
-# Certifique-se de que o Homebrew está instalado
 HOME_BREW_BIN := $(shell which brew)
 
-# Verifica se o Homebrew está instalado
 ifeq ($(HOME_BREW_BIN),)
     $(error "O Homebrew não está instalado. Instale o Homebrew e tente novamente.")
 endif
 
-# Tarefas principais
-.PHONY: all install_chrome install_vscode install_docker install_intellij install_iterm install_zsh install_fork install_martians_mono_font set_font_martians_on_vscode configure_git configure_git_aliases
+.PHONY: all 
+		install_chrome 
+		install_vscode 
+		install_docker 
+		install_intellij 
+		install_iterm 
+		install_zsh 
+		install_fork 
+		install_martians_mono_font 
+		set_font_martians_on_vscode 
+		configure_git 
+		configure_git_aliases
 
-all: install_chrome install_vscode install_docker install_intellij install_iterm install_zsh install_fork install_martians_mono_font set_font_martians_on_vscode configure_git configure_git_aliases
+all: install_chrome 
+	 install_vscode 
+	 install_docker 
+	 install_intellij 
+	 install_iterm 
+	 install_zsh 
+	 install_fork 
+	 install_martians_mono_font 
+	 set_font_martians_on_vscode 
+	 configure_git 
+	 configure_git_aliases
 
 install_chrome:
 	@echo "Instalando Google Chrome..."
