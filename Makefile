@@ -7,9 +7,9 @@ ifeq ($(HOME_BREW_BIN),)
 endif
 
 # Tarefas principais
-.PHONY: all install_chrome install_vscode install_docker install_intellij install_iterm install_zsh install_martians_mono_font set_font_martians_on_vscode configure_git configure_git_aliases
+.PHONY: all install_chrome install_vscode install_docker install_intellij install_iterm install_zsh install_fork install_martians_mono_font set_font_martians_on_vscode configure_git configure_git_aliases
 
-all: install_chrome install_vscode install_docker install_intellij install_iterm install_zsh install_martians_mono_font set_font_martians_on_vscode configure_git configure_git_aliases
+all: install_chrome install_vscode install_docker install_intellij install_iterm install_zsh install_fork install_martians_mono_font set_font_martians_on_vscode configure_git configure_git_aliases
 
 install_chrome:
 	@echo "Instalando Google Chrome..."
@@ -54,6 +54,11 @@ set_font_martians_on_vscode:
 	@echo "Setting font martians mono on vscode"
 	@echo '{"editor.fontFamily": "\"Martian Mono\", Consolas, \"Courier New\", monospace"}' >> ~/Library/Application\ Support/Code/User/settings.json
 	@echo "Fonte configurada"
+
+install_fork:
+	@echo "Instalando Fork..."
+	brew install --cask fork
+	@echo "Fork instalado."
 
 configure_git:
 	@echo "Configurando Git..."
