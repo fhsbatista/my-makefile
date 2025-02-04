@@ -5,6 +5,8 @@ ifeq ($(HOME_BREW_BIN),)
 endif
 
 .PHONY: all 
+		install_go
+		install_postman
 		install_chrome 
 		install_vscode 
 		install_docker 
@@ -17,7 +19,9 @@ endif
 		configure_git 
 		configure_git_aliases
 
-all: install_chrome 
+all: install_go
+	 install_postman 
+	 install_chrome 
 	 install_vscode 
 	 install_docker 
 	 install_intellij 
@@ -28,6 +32,16 @@ all: install_chrome
 	 set_font_martians_on_vscode 
 	 configure_git 
 	 configure_git_aliases
+
+install_postman:
+	@echo "Instalando postman"
+	brew install postman
+	@echo "Postman instalado"
+
+install_go:
+	@echo "Instalando go"
+	brew install go
+	@echo "Go instalado"
 
 install_chrome:
 	@echo "Instalando Google Chrome..."
