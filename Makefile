@@ -5,7 +5,6 @@ ifeq ($(HOME_BREW_BIN),)
 endif
 
 .PHONY: all 
-		install_go
 		install_postman
 		install_chrome 
 		install_vscode 
@@ -19,8 +18,7 @@ endif
 		configure_git 
 		configure_git_aliases
 
-all: install_go
-	 install_postman 
+all: install_postman 
 	 install_chrome 
 	 install_vscode 
 	 install_docker 
