@@ -80,6 +80,7 @@ configure_git:
 	@echo "Configurando Git..."
 	git config --global user.name "Fernando Batista"
 	git config --global user.email "fernandohsbatista@gmail.com"
+	git config push.default current
 	@echo "Git configurado."
 
 configure_git_aliases:
