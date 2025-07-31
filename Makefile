@@ -95,6 +95,7 @@ configure_git:
 	git config --global user.name "Fernando Batista"
 	git config --global user.email "fernandohsbatista@gmail.com"
 	@echo "Git configurado com usuário: Fernando Batista e e-mail: fernandohsbatista@gmail.com."
+	git config push.default current
 
 configure_git_aliases:
 	@echo "Configurando aliases do Git..."
